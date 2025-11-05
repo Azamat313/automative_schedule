@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Schedule App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="/">📅 Schedule App</a></h1>
+            <nav>
+                <a href="/" class="btn">Home</a>
+                <a href="/add" class="btn btn-primary">Add Event</a>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <p>Simple Python Website with Local Database | Powered by Flask & SQLite</p>
+        </footer>
+    </div>
+</body>
+</html>
